@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: myweb
+spec:
+    type: NodePort # provid net access
+    ports:
+        - port: 8080
+          nodePort: 30001 # localhost port
+    selector:
+        app: myweb

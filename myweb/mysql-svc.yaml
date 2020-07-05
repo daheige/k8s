@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service #k8s service
+metadata:
+    name: mysql # k8s service name
+spec:
+    ports:
+        - port: 3306 # service provid service port
+    selector: # service pod labels
+        app: mysql

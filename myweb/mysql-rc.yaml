@@ -1,0 +1,22 @@
+# mysql-rc config
+apiVersion: v1
+kind: ReplicationController # rc controller
+metadata:
+  name: mysql # rc name
+spec:
+  replicas: 1 # rc entry number of mysql
+  selector:
+    app: mysql # match pod lables
+  template:   # pod template
+    metadata:
+      labels:  # pod rc labels
+        app: mysql
+    spec:
+      containers:    # pod container
+      - name: mysql  # container name
+        image: mysql:5.7
+        ports:
+        - containerPort: 3306 # container listen port
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "123456"
