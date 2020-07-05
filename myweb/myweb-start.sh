@@ -1,7 +1,7 @@
 #!/bin/bash
 root_dir=$(cd "$(dirname "$0")"; cd ..; pwd)
 
-kubectl apply -f $root_dir/recommended.yaml
+# kubectl apply -f $root_dir/recommended.yaml
 
 cd $root_dir/myweb
 
