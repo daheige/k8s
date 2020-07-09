@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-manual
+  labels: # 可以定义多个标签
+    app: kubia-manual-v1
+    name: kubia-manual
+    env: prod
+    creation_method: manual
+spec:
+  containers:
+    - name: kubia-manual
+      image: luksa/kubia
+      resources:
+        limits:
+          memory: "100Mi"
+          cpu: "200m"
+      ports:
+        - containerPort: 8080
+          protocol: TCP
