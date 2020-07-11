@@ -8,6 +8,14 @@
 
 # k8s alias
 
+    centos:
+    vim ~/.bashrc
     alias k=kubectl
     alias kdesc="kubectl describe"
     alias kcd="kubectl config set-context $(kubectl config current-context) --namespace"
+    export KUBE_EDITOR="/usr/bin/vim"
+
+    source ~/.bashrc
+
+    mac os: vim ~/.bash_profile
+            source ~/.bash_profile

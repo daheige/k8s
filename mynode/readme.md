@@ -34,3 +34,8 @@
 # show-labels
 
     k get rc --show-labels
+
+# scale 缩容/扩容
+
+    k scale rc kubia --replicas=3
+

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: kubia-web # rc
+spec:
+  replicas: 5
+  selector:
+    matchLabels: # 可以使用表达式
+      app: kubia-web # 和下面的template.metadata.labels.app=kubia 必须一样
+  template:
+    metadata:
+      labels:
+        app: kubia-web
+    spec:
+      containers:
+        - name: kubia-web
+          image: luksa/kubia # pod container image
+          ports:
+            - containerPort: 8080 # container port
