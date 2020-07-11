@@ -26,3 +26,11 @@
 # 查看指定命名空间上的pod
 
     k get pods -n custom-web
+
+# 给rc更加标签
+
+    k label rc myweb name=myweb-app
+
+# show-labels
+
+    k get rc --show-labels
