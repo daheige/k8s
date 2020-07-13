@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: multi-completion-batch-job
+spec:
+  completions: 5 # job 一个接着一个运行
+  parallelism: 2 # 最多2个同时运行
+  template:
+    metadata:
+      labels:
+        app: multi-completion-batch-job
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: main
+          image: luksa/batch-job

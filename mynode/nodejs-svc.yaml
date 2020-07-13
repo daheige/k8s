@@ -5,7 +5,7 @@ metadata:
 spec:
   type: NodePort # provid net access
   ports:
-    - port: 8080
+    - port: 8080 # 服务内部端口
       nodePort: 30956 # localhost port 外部服务可以通过ip:port形式方式kubia pod容器nodejs应用
   selector:
     app: kubia # 选择rc=kubia的pod容器，相当于这些rc pod容器组成了一个service对外提供功能

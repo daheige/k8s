@@ -39,3 +39,12 @@
 
     k scale rc kubia --replicas=3
 
+# 在运行的容器中远程执行命令
+    % k get svc
+    NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+    kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP          8d
+    mynode       NodePort    10.107.147.19    <none>        8080:30956/TCP   5d
+
+    可以看到cluster-ip: 10.107.147.19 服务内部端口 8080
+    % k exec kubia-th74c -- curl -s http://10.107.147.19:8080
+    You've hit kubia-wp5mk
