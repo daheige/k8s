@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  foor: test
+  sleep-time: “20”
+  name: daheige
+kind: ConfigMap
+metadata: # md数据
+  name: foo-config
+  namespace: default
