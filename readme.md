@@ -19,3 +19,8 @@
 
     mac os: vim ~/.bash_profile
             source ~/.bash_profile
+
+# istio 1.8+使用
+
+    https://preliminary.istio.io/latest/zh/docs/
+    
