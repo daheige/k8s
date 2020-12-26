@@ -22,5 +22,8 @@
 
 # istio 1.8+使用
 
+    https://istio.io/latest/zh/docs/tasks/traffic-management/ingress/ingress-control/
+    https://istio.io/latest/zh/docs/setup/getting-started/
+
     https://preliminary.istio.io/latest/zh/docs/
-    
+    https://preliminary.istio.io/latest/zh/docs/setup/getting-started/
