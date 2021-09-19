@@ -165,4 +165,12 @@
     User "docker-for-desktop" set.
     % echo $TOKEN
 
-    根据token登陆，浏览器中就可以访问k8s
+    根据token登陆，浏览器中就可以访问k8s，输入对应的Token就可以访问dashboard
+    http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+
+    APISERVER=$(kubectl config view | grep server | cut -f 2- -d ":" | tr -d " ")
+    curl $APISERVER/api --header "Authorization: Bearer $TOKEN" --insecure
+
+    rest api访问pods情况
+    http://localhost:8080/api/v1/namespaces/default/pods
+
