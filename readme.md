@@ -27,3 +27,11 @@
 
     https://preliminary.istio.io/latest/zh/docs/
     https://preliminary.istio.io/latest/zh/docs/setup/getting-started/
+
+# k8s-in-action
+    
+    https://github.com/daheige/k8s-in-action
+
+# Kubernetes 中文指南
+    
+    https://github.com/daheige/kubernetes-handbook
